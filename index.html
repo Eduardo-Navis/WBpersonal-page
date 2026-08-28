@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Treinamento personalizado para você conquistar mais força, saúde e confiança." />
+    <title>Washington Bianchi | Personal Trainer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="assets/Acad.jpg" media="(min-width: 761px)" />
+    <link rel="preload" as="image" href="assets/W/WB.png" media="(max-width: 760px)" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Washington Bianchi Personal Trainer — início">
+        <img class="brand__logo" src="assets/W/LogoSFD.png" alt="Washington Bianchi Personal Trainer" />
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#personal">Sobre</a>
+        <a href="#sobre">Método</a>
+        <a href="#planos">Contato</a>
+      </nav>
+      <a class="topbar__cta" href="form.html" aria-label="Agendar avaliação">
+        <span>Agendar avaliação</span><i aria-hidden="true">↗</i>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <p class="hero__role"><span></span> Personal trainer</p>
+          <h1 class="wordmark" id="hero-title" aria-label="Washington Bianchi">
+            <img class="hero__logo" src="assets/W/LogoSFD.png" alt="Washington Bianchi" />
+          </h1>
+          <p class="hero__tagline" aria-label="Força para começar. Método para evoluir, melhorar e crescer.">
+            Força para começar<br />Método para
+            <span class="typewriter" aria-hidden="true">
+              <span data-typewriter>evoluir</span><i></i>
+            </span>
+          </p>
+          <a class="hero__button" href="form.html">Comece sua transformação <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <p class="hero__side-note" aria-hidden="true">Movimento · Disciplina · Evolução</p>
+        <div class="scroll-hint" aria-hidden="true">
+          <span>Explore</span><i aria-hidden="true">↓</i>
+        </div>
+      </section>
+
+      <div class="discipline-strip" data-reveal aria-label="Pilares do treinamento">
+        <span>Força</span><i></i><span>Mobilidade</span><i></i><span>Consistência</span><i></i><span>Performance</span>
+      </div>
+
+       <section class="about-training" id="metodo" aria-labelledby="about-title">
+        <div class="section-shell about-training__grid">
+          <div class="about-training__title">
+            <p class="section-kicker" data-reveal>Treinamento personalizado</p>
+            <h2 id="about-title" data-reveal data-delay="1">
+              Por que treinar<br />com um <em>personal?</em>
+            </h2>
+          </div>
+
+          <aside class="method-note" data-reveal aria-label="Resumo do processo">
+            <span>Um processo simples</span>
+            <strong>Planejar.<br />Executar.<br /><em>Evoluir.</em></strong>
+          </aside>
+
+          <div class="about-training__copy">
+            <p class="about-training__text" data-reveal>
+              Um personal trainer transforma objetivos amplos em um plano claro e possível.
+            </p>
+            <p data-reveal data-delay="1">
+              Isso significa aproveitar melhor cada sessão, reduzir riscos e construir uma
+              rotina que faça sentido para o seu momento de vida.
+            </p>
+          </div>
+
+          <div class="about-training__closing" id="contato" data-reveal>
+            <p>O melhor treino é aquele que leva você adiante.</p>
+            <a href="form.html">Fale com o Washington <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="trainer" id="personal" aria-labelledby="trainer-title">
+        <div class="section-shell">
+          <header class="trainer__heading">
+            <p class="section-kicker" data-reveal>Conheça seu treinador</p>
+            <h2 id="trainer-title" data-reveal data-delay="1">Quem é o<br /><em>personal?</em></h2>
+          </header>
+
+          <div class="trainer__layout">
+            <figure class="trainer__portrait" data-reveal>
+              <img src="assets/W/WB2.jpeg" alt="Personal trainer Washington Bianchi em uma academia" loading="lazy" />
+            </figure>
+
+            <div class="trainer__profile">
+              <div class="trainer__bio">
+                <p class="trainer__name" data-reveal>Washington Bianchi</p>
+                <p data-reveal data-delay="1">
+                  Um profissional que acredita em treino com propósito. Washington combina escuta,
+                  planejamento e acompanhamento próximo para transformar cada objetivo em um
+                  processo seguro, possível e consistente.
+                </p>
+              </div>
+
+              <div class="trainer__credentials" aria-label="Formações e especialidades">
+                <span class="trainer__education-label" data-reveal>Formação Profissional</span>
+
+                <article class="credential" data-reveal>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m3 10 9-5 9 5-9 5-9-5Z"/><path d="M7 12.5V17c3 2 7 2 10 0v-4.5"/><path d="M21 10v6"/>
+                  </svg>
+                  <div class="credential__content">
+                    <span>Graduação</span>
+                    <h3>Educação Física</h3>
+                  </div>
+                </article>
+
+                <article class="credential" data-reveal data-delay="1">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 12h3l2-5 4 10 2-5h5"/><path d="M5 5v14M19 5v14"/>
+                  </svg>
+                  <div class="credential__content">
+                    <span>Pós-graduação</span>
+                    <h3>Biomecânica</h3>
+                  </div>
+                </article>
+
+                <article class="credential" data-reveal>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 4v7M4.5 4v4.5A2.5 2.5 0 0 0 7 11M9.5 4v4.5A2.5 2.5 0 0 1 7 11v9"/>
+                    <path d="M16 4v16M16 4c3 1 4 3.5 4 6h-4"/>
+                  </svg>
+                  <div class="credential__content">
+                    <span>Pós-graduação</span>
+                    <h3>Nutrição Esportiva</h3>
+                  </div>
+                </article>
+
+                <article class="credential" data-reveal data-delay="1">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 7v10M3.5 9v6M18 7v10M20.5 9v6M6 12h12"/>
+                  </svg>
+                  <div class="credential__content">
+                    <span>Pós-graduação</span>
+                    <h3>Bodybuilding e Estética</h3>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof" id="sobre" aria-labelledby="proof-title">
+        <div class="section-shell">
+          <div class="proof__heading">
+            <div>
+              <p class="section-kicker" data-reveal>A consultoria</p>
+              <h2 id="proof-title" data-reveal data-delay="1">
+                Por que escolher<br /><em>essa consultoria?</em>
+              </h2>
+            </div>
+
+            <div class="proof__answer" data-reveal data-delay="2">
+              <span>Porque</span>
+              <p>É feita pensando<br />em <em>você.</em></p>
+            </div>
+          </div>
+
+          <div class="proof__features">
+            <article class="feature" data-reveal>
+              <span class="feature__number">01</span>
+              <h3>Treino 100% personalizado</h3>
+              <p>Estratégia construída a partir dos seus objetivos, necessidades e nível atual.</p>
+            </article>
+
+            <article class="feature" data-reveal data-delay="1">
+              <span class="feature__number">02</span>
+              <h3>Acompanhamento em tempo real</h3>
+              <p>Orientação próxima para corrigir, ajustar e aproveitar melhor cada treino.</p>
+            </article>
+
+            <article class="feature" data-reveal data-delay="1">
+              <span class="feature__number">03</span>
+              <h3>Adaptado à sua disponibilidade</h3>
+              <p>Uma rotina possível, flexível e alinhada às demandas do seu dia a dia.</p>
+            </article>
+          </div>
+
+          <section class="cases" aria-labelledby="cases-title">
+            <header class="cases__heading">
+              <div>
+                <p class="section-kicker" data-reveal>Cases reais</p>
+                <h2 id="cases-title" data-reveal data-delay="1">
+                  Processos que viraram<br /><em>resultado.</em>
+                </h2>
+              </div>
+              <p data-reveal data-delay="2">
+                Diferentes histórias, objetivos e pontos de partida. Em comum, estratégia,
+                acompanhamento e constância durante todo o processo.
+              </p>
+            </header>
+
+            <div class="cases__list">
+              <article class="case-card case-card--bia" data-reveal>
+                <figure class="case-card__media">
+                  <img src="assets/W/Bia.jpg" alt="Bia segurando dois troféus após competir na categoria Bikini" loading="lazy" />
+                  <figcaption class="case-card__parallax-name" aria-hidden="true" data-case-name>Beatriz</figcaption>
+                </figure>
+                <div class="case-card__content">
+                  <p class="case-card__eyebrow">Preparação de atleta</p>
+                  <p class="case-card__lead">
+                    Uma preparação construída nos detalhes, do planejamento à apresentação no palco.
+                  </p>
+                  <ul class="case-card__achievements" aria-label="Conquistas da atleta Bia">
+                    <li><strong>Top 2</strong><span>Bikini estreante</span></li>
+                    <li><strong>Top 2</strong><span>Bikini unificada</span></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="case-card case-card--washington" data-reveal>
+                <div class="case-card__content">
+                  <p class="case-card__eyebrow">Transformação pessoal</p>
+                  <p class="case-card__lead">
+                    Antes de orientar outras pessoas, Washington viveu o próprio processo de
+                    emagrecimento e construção de uma rotina consistente. Ele é o próprio case de sucesso.
+                  </p>
+                  <p class="case-card__note">Mais de 30kg de perda de peso aliado a um ganho massivo de massa muscular.</p>
+                </div>
+                <div class="case-card__gallery" aria-label="Registros da transformação física de Washington Bianchi">
+                  <figure>
+                    <img src="assets/W/wBefore3.jpg" alt="Registro de Washington antes de seu processo de emagrecimento" loading="lazy" />
+                  </figure>
+                  <div class="case-card__evolution-pair" aria-label="Comparativo lado a lado da evolução física de Washington">
+                    <figure>
+                      <img src="assets/W/wBefore4.jpg" alt="Primeiro registro da evolução física de Washington" loading="lazy" />
+                    </figure>
+                    <figure>
+                      <img src="assets/W/wBefore5.jpg" alt="Registro seguinte da evolução física de Washington" loading="lazy" />
+                    </figure>
+                  </div>
+                  <span class="case-card__parallax-name case-card__parallax-name--washington" aria-hidden="true" data-case-name>Washington</span>
+                </div>
+              </article>
+
+            </div>
+          </section>
+        </div>
+      </section>
+
+     
+
+      <section class="goals" id="objetivos" aria-labelledby="goals-title">
+        <div class="section-shell">
+          <div class="goals__heading">
+            <div>
+              <p class="section-kicker" data-reveal>Seu objetivo direciona o processo</p>
+              <h2 id="goals-title" data-reveal data-delay="1">
+                Um treino que vai<br />ao encontro dos <em>seus objetivos.</em>
+              </h2>
+            </div>
+            <p data-reveal data-delay="2">
+              Não existe uma fórmula única. Existe o estímulo certo para o seu momento, seu
+              corpo e o resultado que você busca.
+            </p>
+          </div>
+
+          <div class="goals__grid">
+            <article class="goal-card is-open" data-reveal>
+              <button class="goal-card__trigger" type="button" aria-expanded="true" aria-controls="goal-recovery">
+                <span class="goal-card__number">01</span>
+                <span class="goal-card__title">Recuperação</span>
+                <span class="goal-card__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="goal-card__details" id="goal-recovery" aria-hidden="false">
+                <p>Retome força, mobilidade e confiança com progressões seguras que respeitam seu histórico e seus limites.</p>
+              </div>
+            </article>
+
+            <article class="goal-card" data-reveal data-delay="1">
+              <button class="goal-card__trigger" type="button" aria-expanded="false" aria-controls="goal-mass">
+                <span class="goal-card__number">02</span>
+                <span class="goal-card__title">Ganho de massa</span>
+                <span class="goal-card__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="goal-card__details" id="goal-mass" aria-hidden="true">
+                <p>Volume, intensidade e cargas planejados para desenvolver massa muscular com técnica e consistência.</p>
+              </div>
+            </article>
+
+            <article class="goal-card" data-reveal>
+              <button class="goal-card__trigger" type="button" aria-expanded="false" aria-controls="goal-weight-loss">
+                <span class="goal-card__number">03</span>
+                <span class="goal-card__title">Emagrecimento</span>
+                <span class="goal-card__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="goal-card__details" id="goal-weight-loss" aria-hidden="true">
+                <p>Treinos eficientes para elevar o gasto energético, preservar músculos e sustentar uma rotina ativa.</p>
+              </div>
+            </article>
+
+            <article class="goal-card" data-reveal data-delay="1">
+              <button class="goal-card__trigger" type="button" aria-expanded="false" aria-controls="goal-strength">
+                <span class="goal-card__number">04</span>
+                <span class="goal-card__title">Fortalecimento</span>
+                <span class="goal-card__icon" aria-hidden="true">+</span>
+              </button>
+              <div class="goal-card__details" id="goal-strength" aria-hidden="true">
+                <p>Construa uma base forte para o dia a dia, melhore a estabilidade e previna desconfortos e lesões.</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="goals__hint" data-reveal><span aria-hidden="true">↑</span> Toque em um objetivo para saber mais</p>
+        </div>
+      </section>
+
+      <div class="plans-stage">
+      <section class="pricing" id="planos" aria-labelledby="pricing-title">
+        <div class="section-shell">
+          <div class="pricing__heading">
+            <div>
+              <p class="section-kicker" data-reveal>Planos de acompanhamento</p>
+              <h2 id="pricing-title" data-reveal data-delay="1">
+                Escolha o ritmo<br />da sua <em>evolução.</em>
+              </h2>
+            </div>
+            <p data-reveal data-delay="2">
+              Frequência, orientação e constância para transformar o treino em parte da sua rotina.
+            </p>
+          </div>
+
+          <div class="pricing__cards">
+            <article class="price-card" data-reveal>
+              <div class="price-card__topline">
+                <span>Plano essencial</span><small>01</small>
+              </div>
+              <h3>3 dias<br /><em>por semana</em></h3>
+              <div class="price-card__price">
+                <span>A partir de</span>
+                <strong><sup>R$</sup> 497</strong>
+                <small>/ mês</small>
+              </div>
+              <ul>
+                <li>Treino individualizado</li>
+                <li>Até 12 encontros mensais</li>
+                <li>Ajustes e acompanhamento</li>
+              </ul>
+              <a class="price-card__button" href="form.html?plano=3-dias">
+                Escolher plano <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="price-card" data-reveal data-delay="1">
+              <div class="price-card__topline">
+                <span>Plano intensivo</span><small>03</small>
+              </div>
+              <h3>5 dias<br /><em>por semana</em></h3>
+              <div class="price-card__price">
+                <span>A partir de</span>
+                <strong><sup>R$</sup> 747</strong>
+                <small>/ mês</small>
+              </div>
+              <ul>
+                <li>Treino individualizado</li>
+                <li>Até 20 encontros mensais</li>
+                <li>Maior frequência de estímulos</li>
+              </ul>
+              <a class="price-card__button" href="form.html?plano=5-dias">
+                Escolher plano <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="price-card price-card--special" data-reveal data-delay="2">
+              <span class="price-card__badge">Oferta especial</span>
+              <div class="price-card__topline">
+                <span>Plano em dupla</span><small>02</small>
+              </div>
+              <h3>3 dias<br /><em>com parceiro</em></h3>
+              <div class="price-card__price">
+                <span>Por pessoa</span>
+                <strong><sup>R$</sup> 397</strong>
+                <small>/ mês</small>
+              </div>
+              <ul>
+                <li>Treine com quem motiva você</li>
+                <li>Até 12 encontros mensais</li>
+                <li>Economia para os dois</li>
+              </ul>
+              <a class="price-card__button" href="form.html?plano=3-dias-parceiro">
+                Escolher plano <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          </div>
+
+          <p class="pricing__notice" data-reveal>* Valores demonstrativos sujeitos à personalização do plano.</p>
+
+        </div>
+      </section>
+
+      <section class="custom-quote" aria-labelledby="custom-quote-title">
+        <div class="section-shell">
+          <div class="custom-quote__panel" data-reveal>
+            <div class="custom-quote__copy">
+              <p class="section-kicker">Plano sob medida</p>
+              <h2 id="custom-quote-title">Seu objetivo pede<br /><em>outra rotina?</em></h2>
+              <p>Preencha um formulário rápido e receba uma proposta pensada especialmente para você.</p>
+            </div>
+
+            <a href="form.html">
+              <span>Receber orçamento personalizado</span>
+              <i aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </i>
+            </a>
+          </div>
+        </div>
+      </section>
+      </div>
+
+          
+    </main>
+  </body>
+</html>

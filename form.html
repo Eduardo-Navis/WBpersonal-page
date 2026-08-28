@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Formulário de avaliação inicial para consultoria personalizada com Washington Bianchi." />
+    <title>Avaliação inicial | Washington Bianchi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/form-animations.css" />
+    <script src="scripts/form.js" defer></script>
+  </head>
+
+  <body>
+    <header class="form-header">
+      <a class="form-brand" href="index.html" aria-label="Voltar para a página inicial">
+        <img class="form-brand__logo" src="assets/W/LogoSFD.png" alt="Washington Bianchi Personal Trainer" />
+      </a>
+      <a class="back-link" href="index.html"><i aria-hidden="true">←</i> Voltar</a>
+    </header>
+
+    <main>
+      <section class="form-intro" aria-labelledby="form-title">
+        <p class="eyebrow">Avaliação inicial</p>
+        <h1 id="form-title">Vamos entender<br /><em>o seu momento.</em></h1>
+        <p>Responda com calma. Suas informações serão usadas para preparar uma proposta coerente com seus objetivos e sua rotina.</p>
+      </section>
+
+      <div class="form-layout">
+        <aside class="form-progress" aria-label="Progresso do formulário">
+          <div class="progress-heading">
+            <span>Etapa <strong id="current-step">01</strong> de 03</span>
+            <span id="progress-percent">33%</span>
+          </div>
+          <div class="progress-track" aria-hidden="true"><i id="progress-bar"></i></div>
+          <ol>
+            <li class="is-current" data-progress-step><span>01</span>Sobre você</li>
+            <li data-progress-step><span>02</span>Objetivos e saúde</li>
+            <li data-progress-step><span>03</span>Sua rotina</li>
+          </ol>
+          <p>Leva aproximadamente 3 minutos.</p>
+        </aside>
+
+        <form class="assessment-form" id="assessment-form" novalidate>
+          <section class="form-step is-active" data-step="0" aria-labelledby="step-one-title">
+            <header class="step-heading">
+              <span>01</span>
+              <div><p>Primeiro passo</p><h2 id="step-one-title">Conte um pouco sobre você</h2></div>
+            </header>
+
+            <div class="fields-grid">
+              <label class="field field--wide">
+                <span>Nome completo *</span>
+                <input type="text" name="nome" autocomplete="name" placeholder="Como você gostaria de ser chamado?" required />
+              </label>
+              <label class="field">
+                <span>Idade *</span>
+                <input type="number" name="idade" min="14" max="100" inputmode="numeric" placeholder="Ex.: 28" required />
+              </label>
+              <label class="field">
+                <span>WhatsApp *</span>
+                <input type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required />
+              </label>
+              <label class="field">
+                <span>Cidade</span>
+                <input type="text" name="cidade" autocomplete="address-level2" placeholder="Onde você mora?" />
+              </label>
+              <label class="field">
+                <span>Profissão</span>
+                <input type="text" name="profissao" autocomplete="organization-title" placeholder="Qual é a sua rotina de trabalho?" />
+              </label>
+            </div>
+
+            <div class="step-actions step-actions--end">
+              <button class="button button--primary" type="button" data-next>Continuar <span aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="1" aria-labelledby="step-two-title" hidden>
+            <header class="step-heading">
+              <span>02</span>
+              <div><p>Objetivo e segurança</p><h2 id="step-two-title">O que você quer conquistar?</h2></div>
+            </header>
+
+            <fieldset class="choice-group" data-required-group>
+              <legend>Selecione seus principais objetivos *</legend>
+              <div class="choice-grid">
+                <label class="choice"><input type="checkbox" name="objetivos" value="Emagrecimento" /><span>Emagrecimento</span></label>
+                <label class="choice"><input type="checkbox" name="objetivos" value="Ganho de massa" /><span>Ganho de massa</span></label>
+                <label class="choice"><input type="checkbox" name="objetivos" value="Fortalecimento" /><span>Fortalecimento</span></label>
+                <label class="choice"><input type="checkbox" name="objetivos" value="Recuperação" /><span>Recuperação</span></label>
+                <label class="choice"><input type="checkbox" name="objetivos" value="Condicionamento" /><span>Condicionamento</span></label>
+                <label class="choice"><input type="checkbox" name="objetivos" value="Qualidade de vida" /><span>Qualidade de vida</span></label>
+              </div>
+              <small class="field-error">Escolha pelo menos um objetivo.</small>
+            </fieldset>
+
+            <div class="fields-grid">
+              <label class="field">
+                <span>Experiência com treino *</span>
+                <select name="experiencia" required>
+                  <option value="">Selecione</option>
+                  <option>Nunca treinei</option>
+                  <option>Treino há menos de 1 ano</option>
+                  <option>Treino há 1 a 3 anos</option>
+                  <option>Treino há mais de 3 anos</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Treina atualmente? *</span>
+                <select name="treina_atualmente" required>
+                  <option value="">Selecione</option>
+                  <option>Não</option>
+                  <option>Sim, sozinho(a)</option>
+                  <option>Sim, com acompanhamento</option>
+                </select>
+              </label>
+              <label class="field field--wide">
+                <span>Possui lesão, dor ou limitação?</span>
+                <textarea name="limitacoes" rows="3" placeholder="Conte onde sente desconforto, diagnósticos ou movimentos que evita."></textarea>
+              </label>
+              <label class="field field--wide">
+                <span>Condição de saúde ou recomendação médica relevante?</span>
+                <textarea name="saude" rows="3" placeholder="Ex.: pressão alta, cirurgia recente, uso de medicação ou orientação profissional."></textarea>
+              </label>
+            </div>
+
+            <p class="health-note"><span aria-hidden="true">!</span> Este formulário não substitui avaliação ou liberação de um profissional de saúde.</p>
+
+            <div class="step-actions">
+              <button class="button button--ghost" type="button" data-back>Voltar</button>
+              <button class="button button--primary" type="button" data-next>Continuar <span aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="2" aria-labelledby="step-three-title" hidden>
+            <header class="step-heading">
+              <span>03</span>
+              <div><p>Último passo</p><h2 id="step-three-title">Como o treino cabe na sua rotina?</h2></div>
+            </header>
+
+            <fieldset class="choice-group" data-required-group>
+              <legend>Frequência desejada *</legend>
+              <div class="choice-grid choice-grid--plans">
+                <label class="choice"><input type="radio" name="frequencia" value="3 dias por semana" /><span>3 dias <small>por semana</small></span></label>
+                <label class="choice"><input type="radio" name="frequencia" value="5 dias por semana" /><span>5 dias <small>por semana</small></span></label>
+                <label class="choice"><input type="radio" name="frequencia" value="3 dias com parceiro" /><span>3 dias <small>com parceiro</small></span></label>
+                <label class="choice"><input type="radio" name="frequencia" value="Outro" /><span>Outro <small>Informe</small></span></label>
+              </div>
+              <small class="field-error">Escolha uma opção de frequência.</small>
+            </fieldset>
+
+            <label class="field other-frequency" id="other-frequency-field" hidden>
+              <span>Qual frequência você procura? *</span>
+              <input type="text" name="frequencia_outro" placeholder="Descreva a frequência ou formato ideal" />
+            </label>
+
+            <fieldset class="choice-group" data-required-group>
+              <legend>Dias disponíveis *</legend>
+              <div class="days-grid">
+                <label><input type="checkbox" name="dias" value="Segunda" /><span>Seg</span></label>
+                <label><input type="checkbox" name="dias" value="Terça" /><span>Ter</span></label>
+                <label><input type="checkbox" name="dias" value="Quarta" /><span>Qua</span></label>
+                <label><input type="checkbox" name="dias" value="Quinta" /><span>Qui</span></label>
+                <label><input type="checkbox" name="dias" value="Sexta" /><span>Sex</span></label>
+                <label><input type="checkbox" name="dias" value="Sábado" /><span>Sáb</span></label>
+              </div>
+              <small class="field-error">Escolha pelo menos um dia.</small>
+            </fieldset>
+
+            <div class="fields-grid">
+              <label class="field">
+                <span>Melhor período *</span>
+                <select name="periodo" required>
+                  <option value="">Selecione</option>
+                  <option>Manhã</option><option>Tarde</option><option>Noite</option><option>Horário flexível</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Local preferido *</span>
+                <select name="local" required>
+                  <option value="">Selecione</option>
+                  <option>Academia</option><option>Condomínio</option><option>Ao ar livre</option><option>Online</option><option>Quero orientação</option>
+                </select>
+              </label>
+              <label class="field field--wide">
+                <span>Algo mais que o Washington deveria saber?</span>
+                <textarea name="observacoes" rows="4" placeholder="Conte sobre expectativas, dificuldades ou qualquer informação importante."></textarea>
+              </label>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="consentimento" required />
+              <span>Autorizo o compartilhamento destas informações com o personal para avaliação inicial. *</span>
+            </label>
+
+            <div class="step-actions">
+              <button class="button button--ghost" type="button" data-back>Voltar</button>
+              <button class="button button--primary" type="submit">Gerar minha ficha <span aria-hidden="true">↗</span></button>
+            </div>
+          </section>
+        </form>
+      </div>
+
+      <section class="form-result" id="form-result" aria-labelledby="result-title" hidden>
+        <div class="result-icon" aria-hidden="true">✓</div>
+        <p class="eyebrow">Ficha concluída</p>
+        <h2 id="result-title">Tudo pronto para<br /><em>iniciar sua mudança!!</em></h2>
+        <p>Confira a mensagem abaixo. Nenhuma informação é enviada sem que você toque no botão do WhatsApp.</p>
+        <pre id="message-preview"></pre>
+        <div class="result-actions">
+          <a class="button button--whatsapp" id="whatsapp-link" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+          <button class="button button--ghost" id="copy-message" type="button">Copiar mensagem</button>
+          <button class="text-button" id="download-file" type="button">Baixar ficha em .txt</button>
+        </div>
+        <button class="edit-form" id="edit-form" type="button">← Editar respostas</button>
+      </section>
+    </main>
+  </body>
+</html>
