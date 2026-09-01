@@ -115,16 +115,19 @@
 }
 
 .case-card__media img,
+.case-card__priscila-gallery img,
 .case-card__gallery img {
   transition: transform 1100ms cubic-bezier(0.22, 1, 0.36, 1), filter 400ms ease;
 }
 
 .case-card[data-reveal] .case-card__media img,
+.case-card[data-reveal] .case-card__priscila-gallery img,
 .case-card[data-reveal] .case-card__gallery img {
   transform: scale(1.055);
 }
 
 .case-card[data-reveal="visible"] .case-card__media img,
+.case-card[data-reveal="visible"] .case-card__priscila-gallery img,
 .case-card[data-reveal="visible"] .case-card__gallery img {
   transform: scale(1);
 }
@@ -176,6 +179,7 @@
 }
 
 .case-card:hover .case-card__media img,
+.case-card:hover .case-card__priscila-gallery img,
 .case-card:hover .case-card__gallery img {
   filter: saturate(0.96) contrast(1.03);
   transform: scale(1.018);
@@ -204,6 +208,7 @@
 
 .custom-quote__panel::after,
 .case-card--bia::after,
+.case-card--priscila::after,
 .case-card--washington::after {
   position: absolute;
   z-index: 2;
@@ -220,6 +225,7 @@
 
 .custom-quote__panel[data-reveal="visible"]::after,
 .case-card--bia[data-reveal="visible"]::after,
+.case-card--priscila[data-reveal="visible"]::after,
 .case-card--washington[data-reveal="visible"]::after {
   animation: custom-quote-border 4.5s linear infinite;
 }
@@ -241,5 +247,5 @@
   [data-reveal] { opacity: 1; transform: none; transition: none; }
   .goal-card, .goal-card__details, .goal-card__icon, .price-card, .credential, .case-card, .custom-quote__panel > a { transition: none; }
   .case-card__content > *, .case-card__parallax-name { opacity: 1; clip-path: none; filter: none; transform: none; transition: none; }
-  .custom-quote__panel::after, .case-card--bia::after, .case-card--washington::after { display: none; }
+  .custom-quote__panel::after, .case-card--bia::after, .case-card--priscila::after, .case-card--washington::after { display: none; }
 }

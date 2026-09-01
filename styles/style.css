@@ -249,7 +249,7 @@ section[id] { scroll-margin-top: 76px; }
 .cases__list { display: grid; gap: 16px; margin-top: clamp(50px, 7vw, 84px); }
 .case-card { position: relative; display: grid; overflow: hidden; border: 1px solid var(--line); background: #080b0b; }
 .case-card__media { min-width: 0; min-height: 0; overflow: hidden; margin: 0; background: #050707; }
-.case-card__media img, .case-card__gallery img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.86) contrast(1.02); }
+.case-card__media img, .case-card__gallery img, .case-card__priscila-gallery img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.86) contrast(1.02); }
 .case-card__content { position: relative; z-index: 1; align-self: center; padding: clamp(34px, 5vw, 66px); }
 .case-card__eyebrow { margin: 0 0 18px; color: var(--accent); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
 .case-card h3 { margin: 0; font-family: var(--display); font-size: clamp(3.4rem, 6vw, 6.2rem); font-style: italic; font-weight: 800; letter-spacing: -0.035em; line-height: 0.82; text-transform: uppercase; }
@@ -264,6 +264,15 @@ section[id] { scroll-margin-top: 76px; }
 .case-card__achievements li { display: grid; gap: 5px; padding: 22px 18px; border: 1px solid rgba(34, 211, 255, 0.24); background: rgba(34, 211, 255, 0.035); }
 .case-card__achievements strong { color: var(--accent); font-family: var(--display); font-size: 2rem; font-style: italic; line-height: 1; text-transform: uppercase; }
 .case-card__achievements span { color: #aeb8b5; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; }
+.case-card--priscila { min-height: 660px; grid-template-columns: minmax(0, 1.28fr) minmax(330px, 0.72fr); border-color: rgba(34, 211, 255, 0.42); background: #080b0b; }
+.case-card--priscila .case-card__eyebrow { margin-bottom: 24px; font-family: var(--display); font-size: clamp(1.35rem, 2.2vw, 2rem); font-style: italic; font-weight: 800; letter-spacing: 0.08em; line-height: 1; }
+.case-card__priscila-gallery { position: relative; display: grid; min-width: 0; isolation: isolate; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto repeat(2, minmax(0, 1fr)); gap: 8px; padding: 8px; }
+.case-card__priscila-gallery::after { position: absolute; z-index: 1; inset: 8px; background: linear-gradient(to bottom, rgba(3, 5, 5, 0.12), transparent 45%, rgba(3, 5, 5, 0.68)); content: ""; pointer-events: none; }
+.case-card__gallery-label { position: relative; z-index: 2; padding: 6px 8px 2px; color: var(--accent); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.18em; line-height: 1; text-transform: uppercase; }
+.case-card__priscila-gallery figure { min-width: 0; min-height: 0; overflow: hidden; margin: 0; background: #050707; }
+.case-card__priscila-gallery img { object-position: center 28%; }
+.case-card__parallax-name--priscila { right: 18px; bottom: 28px; left: 28px; width: fit-content; max-width: calc(100% - 56px); font-size: clamp(3.4rem, 6vw, 6.6rem); }
+.case-card--priscila .case-card__note strong { display: block; margin-bottom: 7px; color: var(--accent); font-family: var(--display); font-size: clamp(2.3rem, 4vw, 4rem); font-style: italic; letter-spacing: -0.02em; line-height: 0.9; }
 .case-card--washington { min-height: 660px; grid-template-columns: minmax(330px, 0.72fr) minmax(0, 1.28fr); border-color: rgba(34, 211, 255, 0.42); background: #080b0b; }
 .case-card--washington .case-card__eyebrow { margin-bottom: 24px; font-family: var(--display); font-size: clamp(1.35rem, 2.2vw, 2rem); font-style: italic; font-weight: 800; letter-spacing: 0.08em; line-height: 1; }
 .case-card--washington h3 { font-size: clamp(3rem, 5vw, 5rem); }
@@ -277,12 +286,10 @@ section[id] { scroll-margin-top: 76px; }
 .case-card__parallax-name--washington { right: 18px; bottom: 28px; left: 28px; width: fit-content; max-width: calc(100% - 56px); font-size: clamp(3.4rem, 6vw, 6.6rem); }
 
 @media (min-width: 761px) {
-  .cases__list {
-    align-items: stretch;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .cases__list { align-items: stretch; grid-template-columns: 1fr; }
 
   .case-card--bia,
+  .case-card--priscila,
   .case-card--washington {
     min-height: 0;
     grid-template-columns: 1fr;
@@ -294,9 +301,20 @@ section[id] { scroll-margin-top: 76px; }
     height: clamp(500px, 43vw, 620px);
   }
 
+  .case-card--priscila .case-card__priscila-gallery { height: clamp(500px, 40vw, 570px); }
+
+  .case-card--priscila .case-card__priscila-gallery,
   .case-card--washington .case-card__gallery { order: 1; }
+  .case-card--priscila .case-card__content,
   .case-card--washington .case-card__content { order: 2; }
   .case-card__content { padding: clamp(34px, 3.5vw, 48px); }
+}
+
+@media (min-width: 1100px) {
+  .cases__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .case-card__parallax-name { font-size: clamp(3.2rem, 4vw, 4.8rem); }
+  .case-card__parallax-name--priscila,
+  .case-card__parallax-name--washington { font-size: clamp(2.7rem, 3.6vw, 4.2rem); }
 }
 
 .goals { position: relative; overflow: hidden; padding: clamp(110px, 12vw, 170px) 0; background: #0a0d0d; }
@@ -514,7 +532,7 @@ section[id] { scroll-margin-top: 76px; }
   .cases__heading h2 em { display: block; }
   .cases__heading > p { margin-top: 24px; font-size: 0.84rem; line-height: 1.68; }
   .cases__list { gap: 10px; margin-top: 38px; }
-  .case-card, .case-card--bia, .case-card--washington { min-height: 0; grid-template-columns: 1fr; }
+  .case-card, .case-card--bia, .case-card--priscila, .case-card--washington { min-height: 0; grid-template-columns: 1fr; }
   .case-card__content { padding: 30px 20px 28px; }
   .case-card h3, .case-card--washington h3 { font-size: clamp(2.8rem, 14vw, 3.7rem); }
   .case-card__lead { margin-top: 22px; font-size: 0.82rem; line-height: 1.65; }
@@ -526,6 +544,12 @@ section[id] { scroll-margin-top: 76px; }
   .case-card__achievements li { padding: 16px 12px; }
   .case-card__achievements strong { font-size: 1.65rem; }
   .case-card__achievements span { font-size: 0.48rem; line-height: 1.35; }
+  .case-card--priscila .case-card__content { order: 2; }
+  .case-card--priscila .case-card__eyebrow { margin-bottom: 18px; font-size: 1.4rem; }
+  .case-card__priscila-gallery { height: 460px; min-height: 0; order: 1; gap: 6px; padding: 6px; }
+  .case-card__priscila-gallery::after { inset: 6px; }
+  .case-card__parallax-name--priscila { right: 14px; bottom: 18px; left: 14px; max-width: calc(100% - 28px); font-size: clamp(3rem, 17vw, 4.7rem); }
+  .case-card--priscila .case-card__note strong { font-size: 2.7rem; }
   .case-card--washington .case-card__content { order: 2; }
   .case-card--washington .case-card__eyebrow { margin-bottom: 18px; font-size: 1.4rem; }
   .case-card__gallery { min-height: 420px; grid-template-columns: 0.72fr 1.28fr; order: 1; padding: 6px; }
