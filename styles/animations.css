@@ -82,11 +82,10 @@
 }
 
 .price-card {
-  transition: border-color 240ms ease, transform 240ms ease, background-color 240ms ease;
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 240ms ease;
 }
 
 .price-card:hover {
-  border-color: rgba(34, 211, 255, 0.38);
   transform: translateY(-5px);
 }
 

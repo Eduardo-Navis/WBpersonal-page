@@ -123,22 +123,6 @@ frequencyOptions.forEach((option) => {
   });
 });
 
-const requestedPlan = new URLSearchParams(window.location.search).get("plano");
-const planFrequencies = {
-  "3-dias": "3 dias por semana",
-  "5-dias": "5 dias por semana",
-  "3-dias-parceiro": "3 dias com parceiro",
-};
-
-if (requestedPlan && planFrequencies[requestedPlan]) {
-  const selectedPlan = frequencyOptions.find((option) => option.value === planFrequencies[requestedPlan]);
-
-  if (selectedPlan) {
-    selectedPlan.checked = true;
-    selectedPlan.dispatchEvent(new Event("change", { bubbles: true }));
-  }
-}
-
 const phoneInput = form.querySelector("input[name='telefone']");
 phoneInput.addEventListener("input", () => {
   const digits = phoneInput.value.replace(/\D/g, "").slice(0, 11);
